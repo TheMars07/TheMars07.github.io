@@ -1,0 +1,36 @@
+.column1 {
+    width: 50%;
+    float: left;
+    background-color: #808080;
+    padding: 10px;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+.column2 {
+    width: 50%;
+    float: left;
+    background-color: #fff;
+    padding: 10px;
+    height: 400px;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+.column1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column2 p{
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
+}

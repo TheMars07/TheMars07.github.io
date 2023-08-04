@@ -1,0 +1,21 @@
+.home-text{
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+}
+
+#video{
+    box-sizing: border-box;
+    z-index: -1;
+    position: fixed;
+    min-width: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+q{
+    font-style: italic;
+    font-size: 20px;
+}
