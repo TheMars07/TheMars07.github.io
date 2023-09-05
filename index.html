@@ -7,10 +7,13 @@
         <link rel="stylesheet" type="text/css" href="./CSS/body.css">
         <link rel="stylesheet" type="text/css" href="./CSS/navbar.css">
         <link rel="stylesheet" type="text/css" href="./CSS/home.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/slideshow.css">
         <link rel="stylesheet" type="text/css" href="./CSS/about.css">
         <link rel="stylesheet" type="text/css" href="./CSS/github.css">
-        <link rel="stylesheet" type="text/css" href="./CSS/contact.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/popup_form.css">
         <link rel="stylesheet" type="text/css" href="./CSS/footer.css">
+        <script src="./JS/slideshow.js" defer></script>
+        <script src="./JS/form.js" defer></script>
     </head>
     <body>
         <br>
@@ -18,9 +21,10 @@
         <div class="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#slideshow">Slideshow</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#github">Github</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li onclick="openForm()" ondblclick="closeForm()" ><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <!-- END NAV -->
@@ -47,6 +51,43 @@
             </div>
         </div>
         <!-- END HOME -->
+
+        <!-- SLIDESHOW -->
+        <div id="slideshow">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                <img src="./Images/htmlcssjslogo.jpg" style="width:100%">
+                <div class="text">I am a web developer trained in: HTML, CSS, JavaScript</div>
+                </div>
+                <div class="mySlides fade">
+                <img src="./Images/mysqllogo2.png" style="width:100%">
+                <div class="text">MySQL</div>
+                </div>
+                <div class="mySlides fade">
+                <img src="./Images/jquerylogo.png" style="width:100%">
+                <div class="text">jQuery</div>
+                </div>
+                <div class="mySlides fade">
+                <img src="./Images/nodejslogo.png" style="width:100%">
+                <div class="text">and Node.js</div>
+                </div>
+                <div class="mySlides fade">
+                <img src="./Images/email.png" style="width:100%" onclick="openForm()" ondblclick="closeForm()">
+                <div class="text" onclick="openForm()" ondblclick="closeForm()">Click here to contact me now!</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+        <!-- END SLIDESHOW -->
 
         <!-- ABOUT -->
         <div id="about" class="row">
@@ -78,7 +119,25 @@
         <!-- END GITHUB -->
 
         <!-- CONTACT -->
-        <div id="contact" class="row">
+        <button class="open-button" onclick="openForm()">CONTACT</button>
+        <div class="form-popup" id="myForm">
+        <form action="" class="form-container">
+            <h1>CONTACT</h1>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Type your name here..." name="name" required>
+            <label for="phone"><b>Phone</b></label>
+            <input type="text" placeholder="Type your phone number here..." name="phone" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Type your email address here..." name="email" required>
+            <label for="message"><b>Message</b></label>
+            <input type="text" placeholder="Type your message here..." name="message" required>
+
+
+            <button type="submit" class="btn">SUBMIT</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+        </form>
+        </div>
+        <!-- <div id="contact" class="row">
             <div class="column5">
                 <img src="./Images/stockimg2.png" alt="Email Logo">
             </div>
@@ -94,7 +153,7 @@
                     <input type="submit" value="Submit">
                 </form>
             </div>
-        </div>
+        </div> -->
         <!-- END CONTACT -->
 
         <!-- FOOTER -->
